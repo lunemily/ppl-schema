@@ -63,3 +63,27 @@ export type BattleFormat = {
     id: number;
     name: string;
 };
+export type MeetupTime = {
+    location: string;
+    startTimeUtc: string;
+    durationInMinutes: number;
+};
+export type LeagueFormat = {
+    badgesForElites: number;
+    emblemsForChamp: number;
+    badgesForChamp: number;
+    emblemWeight: number;
+};
+export type Settings = {
+    eventEndDateUtc: string;
+    eventSupportsQueueState: boolean;
+    leagueFormat: LeagueFormat;
+    meetupTimes: MeetupTime[];
+    _links: {
+        trainerCard: string;
+        rulesAsset: string;
+        prizesAsset: string;
+        scheduleAsset: string;
+        mapAsset: string;
+    };
+};
